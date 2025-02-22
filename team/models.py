@@ -11,3 +11,7 @@ class teamMember(models.Model):
     phone_num = models.CharField(max_length = 16, help_text = "Enter a phone number in format: (ex: 123-456-7890)")
     role = models.CharField(max_length = 16, options = role_options, default = 'reg', help_text = "Select member's role (Admin or Regular Member)")
     
+    # returns more readable representation of member
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} ({self.role})"
+    
