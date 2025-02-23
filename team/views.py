@@ -14,7 +14,7 @@ class teamDirectoryView(generics.viewAddAPI):
 class memberProfileView(generics.getEditDeleteAPI):
     # restrict access if necessary (admins edit/delete, others can only view)
     member_permission = [isAdminOrReadOnly]
-    # gets indivdual member data
+    # gets indivdual member data, (but filtered based on ID, e.g.. 1 - nick, 2 - bob)
     team_members = teamMember.objects.all()
     # conv. data to JSON for API
     team_members_serializer = tmSerializer
