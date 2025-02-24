@@ -5,8 +5,8 @@ from .models import teamMember
 class tmSerializer (serializers.ModelSerializer):
     class Meta:
         model = teamMember
-        # incl. only some fields for better secruity, more control
-        fields = ['first_name', 'last_name', 'email']
+        # added all fields for testing (like in assignment)
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'role']
     
     # ensures first name is not empty or just space chars
     def validate_first_name(self, value):
