@@ -3,7 +3,7 @@ from django.db import models
 # rep person on team with personal details
 class teamMember(models.Model):
     # diff roles, first val stored in database, second val shown in forms
-    role_options = [('admin', 'Admin'), ('reg', 'Regular')]
+    role_options = [('admin', 'Admin'), ('regular', 'Regular')]
     # team member contact info (name, email, phone, role)
     first_name = models.CharField(max_length = 35, blank = False, null = False, help_text = "Enter member's first name")
     last_name = models.CharField(max_length = 35, blank = False, null = False, help_text = "Enter member's last name")
