@@ -5,11 +5,11 @@ class teamMember(models.Model):
     # diff roles, first val stored in database, second val shown in forms
     role_options = [('admin', 'Admin'), ('reg', 'Regular')]
     # team member contact info (name, email, phone, role)
-    first_name = models.CharField(max_length = 35, help_text = "Enter member's first name")
-    last_name = models.CharField(max_length = 35, help_text = "Enter member's last name")
-    email_addr = models.EmailField(unique = True, help_text = "Provide a valid email address")
-    phone_num = models.CharField(max_length = 16, help_text = "Enter a phone number in format: (ex: 123-456-7890)")
-    role = models.CharField(max_length = 16, choices = role_options, default = 'reg', help_text = "Select member's role (Admin or Regular Member)")
+    first_name = models.CharField(max_length = 35, blank = False, null = False, help_text = "Enter member's first name")
+    last_name = models.CharField(max_length = 35, blank = False, null = False, help_text = "Enter member's last name")
+    email = models.EmailField(unique = True, blank = False, null = False, help_text = "Provide a valid email address")
+    phone_num = models.CharField(max_length = 16, blank = False, null = False, help_text = "Enter a phone number in format: (ex: 123-456-7890)")
+    role = models.CharField(max_length = 16, choices = role_options, default = 'regular', blank = False, null = False, help_text = "Select member's role (Admin or Regular Member)")
     
     # returns more readable representation of member
     def __str__(self):
