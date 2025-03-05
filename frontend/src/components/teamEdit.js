@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import TeamForm from './teamForm';
 
-
 // page for editing existing team member
 // gets member details and allows for updating
 
