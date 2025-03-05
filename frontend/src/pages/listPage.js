@@ -26,10 +26,10 @@ const listPage = () => {
     return (
         <div>
             <h1>Team Members</h1>
-            <button onClick={() => navigate('/add')}>Add New Member</button>
-            <TeamList members={members} onEdit={handleEdit} />
+            <button onClick = {() => navigate('/add')}>Add New Member</button>
+            <teamList members = {members} onEdit = {handleEdit} />
         </div>
     );
 };
 
-export default ListPage;
+export default listPage;
