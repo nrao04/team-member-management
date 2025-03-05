@@ -18,9 +18,10 @@ const teamForm = ({onSubmit, initialData = {first_name: '', last_name: '', role:
         // calls par. funct. with form data
         onSubmit(formData)
     };
-
+    
+    // handles form submission details
     return (
-        <form onSubmit={formSubmit}>
+        <form onSubmit = {formSubmit}>
             <label>First Name:</label>
             <input type = "text" name = "first_name" value = {formData.first_name} onChange = {formFieldChange} required />
 
