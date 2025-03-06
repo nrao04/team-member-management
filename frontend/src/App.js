@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ListPage from './pages/ListPage';
-import AddPage from './pages/AddPage';
-import EditPage from './pages/EditPage';
+import * as Tooltip from "@radix-ui/react-tooltip";
+import AddPage from "./pages/AddPage";
+import EditPage from "./pages/EditPage";
 import './styles.css'; // import global styles
 
 // main application component
@@ -10,7 +11,8 @@ import './styles.css'; // import global styles
 
 function App() {
     return (
-        <Router>
+        <Tooltip.Provider>
+            <Router>
             <div className="App">
                 {/* defines diff routes for the app */}
                 <Routes>
@@ -24,7 +26,8 @@ function App() {
                     <Route path="/edit/:id" element={<EditPage />} />
                 </Routes>
             </div>
-        </Router>
+            </Router>
+        </Tooltip.Provider>
     );
 }
 
