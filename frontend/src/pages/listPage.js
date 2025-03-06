@@ -29,6 +29,9 @@ const ListPage = () => {
     return (
         <div>
             <h1>Team Members</h1>
+            <p>
+                You have {members.length} team members.
+            </p>
             {/* button to navigate to the add member page */}
             <button onClick={() => navigate('/add')}>Add New Member</button>
             

@@ -41,7 +41,6 @@ const TeamEdit = () => {
 
     return (
         <div>
-            <h1>Edit Team Member</h1>
             {/* render form only when data is loaded */}
             {memberData ? (
                 <>
