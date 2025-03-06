@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 // form component for adding or editing team members
 // accepts opt initial data to prefill form
-const TeamForm = ({onSubmit, initialData = {first_name: '', last_name: '', email: '', phone_number: '', role: ''} }) => {
+const TeamForm = ({onSubmit, initialData = {first_name: '', last_name: '', email: '', phone_number: '', role: 'regular'} }) => {
     // local state for form fields
     const [formData, setFormData] = useState(initialData);
 
@@ -33,9 +33,9 @@ const TeamForm = ({onSubmit, initialData = {first_name: '', last_name: '', email
 
             <label>Phone Number:</label>
             <input type="text" name="phone_number" value={formData.phone_number} onChange={formFieldChange} required />
-            
+
             <label>Role:</label>
-            <select name = "role" value = {formData.role} onChange = {formFieldChange}>
+            <select name = "role" value = {formData.role} onChange = {formFieldChange} required>
                 <option value = "regular">Regular</option>
                 <option value = "admin">Admin</option>
             </select>

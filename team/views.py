@@ -17,5 +17,5 @@ class memberProfileView(generics.RetrieveUpdateDestroyAPIView):
     # conv. data to JSON for API
     serializer_class = tmSerializer
     # restrict access if necessary (admins edit/delete, others can only view)
-    permission_class = [isAdminOrReadOnly]
+    # permission_class = [isAdminOrReadOnly]
     
