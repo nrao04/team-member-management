@@ -38,3 +38,5 @@ const TeamForm = ({onSubmit, initialData = {first_name: '', last_name: '', role:
         </form>
     );
 };
+
+export default TeamForm;

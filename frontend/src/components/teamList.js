@@ -2,7 +2,7 @@ import React from 'react';
 
 // displays list of team members
 // each member is clickable and can navigate to the edit page
-const TeamList = ({members, onEdit, onDelete}) => {
+const TeamList = ({members, onEdit, onDelete, userRole, userId}) => {
     return (
         <ul>
             {/* iterate thru list of members */}
