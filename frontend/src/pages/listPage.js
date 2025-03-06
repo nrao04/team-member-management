@@ -6,6 +6,7 @@ import * as Avatar from "@radix-ui/react-avatar";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { Button } from "../components/Button"; // custom button component
 import {PlusIcon, Pencil1Icon} from "@radix-ui/react-icons"
+import './ListPage.css';
 
 // displays list of team members
 // fetches members from the API and provides navigation
