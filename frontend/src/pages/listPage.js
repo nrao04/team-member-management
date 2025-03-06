@@ -14,7 +14,7 @@ const ListPage = () => {
 
     useEffect(() => {
         // fetch list of members from API
-        axios.get('http://127.0.0.1:8000/api/teammembers/')
+        axios.get('http://127.0.0.1:8000/api/team-members/')
             // redirects user back to home page (ran successfully)
             .then(response => setMembers(response.data))
             // logs errors during req

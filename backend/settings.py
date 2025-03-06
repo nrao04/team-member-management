@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework', #django REST API
     'team', #registers my app
+    'corsheaders' # enables cors middleware
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -130,7 +132,15 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',  # req login for API access
+        # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',  # req login for API access
+        'rest_framework.permissions.AllowAny'
     ]
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOW_CREDENTIALS = True
 
