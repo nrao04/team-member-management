@@ -21,28 +21,92 @@ const TeamForm = ({onSubmit, initialData = {first_name: '', last_name: '', email
     
     // handles form submission details
     return (
-        <form onSubmit = {formSubmit}>
-            <label>First Name:</label>
-            <input type = "text" name = "first_name" value = {formData.first_name} onChange = {formFieldChange} required />
-
-            <label>Last Name:</label>
-            <input type = "text" name = "last_name" value = {formData.last_name} onChange = {formFieldChange} required />
-
-            <label>Email:</label>
-            <input type="email" name="email" value={formData.email} onChange={formFieldChange} required />
-
-            <label>Phone Number:</label>
-            <input type="text" name="phone_number" value={formData.phone_number} onChange={formFieldChange} required />
-
-            <label>Role:</label>
-            <select name = "role" value = {formData.role} onChange = {formFieldChange} required>
-                <option value = "regular">Regular</option>
-                <option value = "admin">Admin</option>
-            </select>
-
-            <button type = "submit" >Submit</button>
+        <form onSubmit={formSubmit}>
+          {/* info Section */}
+          <div className="formSection">
+            <h3>Info</h3>
+    
+            <div className="formGroup">
+              <label htmlFor="first_name">First Name</label>
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                value={formData.first_name}
+                onChange={formFieldChange}
+                required
+              />
+            </div>
+    
+            <div className="formGroup">
+              <label htmlFor="last_name">Last Name</label>
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                value={formData.last_name}
+                onChange={formFieldChange}
+                required
+              />
+            </div>
+    
+            <div className="formGroup">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={formFieldChange}
+                required
+              />
+            </div>
+    
+            <div className="formGroup">
+              <label htmlFor="phone_number">Phone Number</label>
+              <input
+                id="phone_number"
+                name="phone_number"
+                type="tel"
+                value={formData.phone_number}
+                onChange={formFieldChange}
+                required
+              />
+            </div>
+          </div>
+    
+          {/* role Section */}
+          <div className="formSection">
+            <h3>Role</h3>
+    
+            <label className="radioLabel">
+              <input
+                type="radio"
+                name="role"
+                value="regular"
+                checked={formData.role === 'regular'}
+                onChange={formFieldChange}
+              />
+              Regular – Can’t delete members
+            </label>
+    
+            <label className="radioLabel">
+              <input
+                type="radio"
+                name="role"
+                value="admin"
+                checked={formData.role === 'admin'}
+                onChange={formFieldChange}
+              />
+              Admin – Can delete members
+            </label>
+          </div>
+    
+          <button type="submit" className="saveButton">
+            Save
+          </button>
         </form>
-    );
+      );
 };
 
 export default TeamForm;

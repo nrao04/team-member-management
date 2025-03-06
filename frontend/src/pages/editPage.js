@@ -1,24 +1,21 @@
 import React from 'react';
 import TeamEdit from '../components/TeamEdit'
+import './EditPage.css';
 
 // wrapper page for editing team member
 // displays the teamEdit component
 
 const EditPage = () => {
     return (
-        <div>
-            <div>
-                <h1>Edit Team Member</h1>
-                <p>
-                    Edit contact info, location, and role.
-                </p>
-                <TeamEdit />
-                {/* Description Below the Form */}
-                <p>
-                </p>
-            </div>
+        <div className="pageContainer">
+          <div className="formCard">
+            <h2>Edit a team member</h2>
+            <p className="subtitle">Edit contact info, location, and role.</p>
+            
+            <TeamEdit />
+          </div>
         </div>
-    );
+      );
 };
 
 export default EditPage

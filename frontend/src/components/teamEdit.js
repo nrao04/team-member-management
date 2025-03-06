@@ -39,21 +39,21 @@ const TeamEdit = () => {
         }
     };
 
-    return (
-        <div>
-            {/* render form only when data is loaded */}
-            {memberData ? (
-                <>
-                    <TeamForm onSubmit={handleSubmit} initialData={memberData} />
-                    <button onClick={handleDelete} style={{ backgroundColor: "red", color: "white", marginTop: "10px" }}>
-                        Delete
-                    </button>
-                </>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    );
+    if (!memberData) {
+        return <p>Loading...</p>;
+    }
+    
+      return (
+        <>
+          {/* reuse the same TeamForm component for editing */}
+          <TeamForm onSubmit={handleSubmit} initialData={memberData} />
+    
+          {/* delete button, styled via .deleteButton in EditPage.css */}
+          <button className="deleteButton" onClick={handleDelete}>
+            Delete
+          </button>
+        </>
+      );
 };
 
 export default TeamEdit;
