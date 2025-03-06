@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import teamList from '../components/teamList';
+import TeamList from '../components/TeamList';
 import {useNavigate} from 'react-router-dom';
 
 // displays list of team members
 // fetches members from the API and provides navigation
 
-const listPage = () => {
+const ListPage = () => {
     // stores the team members
     const [members, setMembers] = useState([]);
     // allows navigation to other pages
@@ -31,9 +31,9 @@ const listPage = () => {
             <h1>Team Members</h1>
              {/* button to navigate to the add member page */}
             <button onClick = {() => navigate('/add')}>Add New Member</button>
-            <teamList members = {members} onEdit = {handleEdit} />
+            <TeamList members = {members} onEdit = {handleEdit} />
         </div>
     );
 };
 
-export default listPage;
+export default ListPage;

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import teamForm from './teamForm';
+import TeamForm from './TeamForm';
 
 // page for editing existing team member
 // gets member details and allows for updating
 
-const teamEdit = () => {
+const TeamEdit = () => {
     // gets member ID from URL
     const {id} = useParams();
     // allows us to navigate between pages
@@ -34,9 +34,9 @@ const teamEdit = () => {
         <div>
             <h1>Edit Team Member</h1>
             {/* render form only when data is loaded */}
-            {memberData && <teamForm onSubmit={handleSubmit} initialData={memberData} />}
+            {memberData && <TeamForm onSubmit={handleSubmit} initialData={memberData} />}
         </div>
     );
 };
 
-export default teamEdit;
+export default TeamEdit;

@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import teamForm from '../components/teamForm';
+import TeamForm from '../components/TeamForm';
 import { useNavigate } from 'react-router-dom';
 
-const addPage = () => {
+const AddPage = () => {
     // allows us to navigate between pages
     const navigate = useNavigate();
 
@@ -20,9 +20,9 @@ const addPage = () => {
     return (
         <div>
             <h1>Add New Team Member</h1>
-            <teamForm onSubmit = {handleSubmit} />
+            <TeamForm onSubmit = {handleSubmit} />
         </div>
     );
 };
 
-export default addPage;
+export default AddPage;

@@ -2,7 +2,7 @@ import React from 'react';
 
 // displays list of team members
 // each member is clickable and can navigate to the edit page
-const teamList = ({members, onEdit, onDelete}) => {
+const TeamList = ({members, onEdit, onDelete}) => {
     return (
         <ul>
             {/* iterate thru list of members */}
@@ -26,4 +26,4 @@ const teamList = ({members, onEdit, onDelete}) => {
     );
 };
 
-export default teamList;
+export default TeamList;

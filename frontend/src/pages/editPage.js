@@ -1,16 +1,16 @@
 import React from 'react';
-import teamEdit from '../components/teamEdit'
+import TeamEdit from '../components/TeamEdit'
 
 // wrapper page for editing team member
 // displays the teamEdit component
 
-const editPage = () => {
+const EditPage = () => {
     return (
         <div>
             <h1>Edit Team Member</h1>
-            <teamEdit/>
+            <TeamEdit/>
         </div>
     )
 };
 
-export default editPage
+export default EditPage

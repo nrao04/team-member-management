@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import listPage from './pages/listPageistPage';
-import addPage from './pages/addPage';
-import editPage from './pages/editPage';
+import ListPage from './pages/ListPage';
+import AddPage from './pages/AddPage';
+import EditPage from './pages/EditPage';
 import './styles.css'; // import global styles
 
 // main application component
