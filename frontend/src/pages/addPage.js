@@ -8,7 +8,8 @@ const AddPage = () => {
     const navigate = useNavigate();
 
     // funct to handle form submission
-    const handleSubmit = ("Submitting a new member:", newMember) => {
+    const handleSubmit = (newMember) => {
+        console.log("Submitting a new member:", newMember);
         // send POST req to backend API to add new member
         axios.post('http://127.0.0.1:8000/api/team-members/', newMember)
             // redirects user back to home page (ran successfully)

@@ -29,9 +29,18 @@ const ListPage = () => {
     return (
         <div>
             <h1>Team Members</h1>
-             {/* button to navigate to the add member page */}
-            <button onClick = {() => navigate('/add')}>Add New Member</button>
-            <TeamList members = {members} onEdit = {handleEdit} />
+            {/* button to navigate to the add member page */}
+            <button onClick={() => navigate('/add')}>Add New Member</button>
+            
+            {/* Display team members */}
+            <ul>
+                {members.map(member => (
+                    <li key={member.id}>
+                        {member.first_name} {member.last_name} - {member.role}
+                        <button onClick={() => handleEdit(member.id)}>Edit</button>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };

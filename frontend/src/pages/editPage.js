@@ -7,7 +7,6 @@ import TeamEdit from '../components/TeamEdit'
 const EditPage = () => {
     return (
         <div>
-            <h1>Edit Team Member</h1>
             <TeamEdit/>
         </div>
     )

@@ -7,7 +7,7 @@ class isAdminOrReadOnly(BasePermission):
             # allow read only actions
             return True
         # restrict edit/delete access to admins only
-        if request.method == 'DELETE':
+        if request.method == ['DELETE', 'PUT', 'PATCH']:
             return request.user.is_authenticated and request.user.is_staff 
         return True
     
