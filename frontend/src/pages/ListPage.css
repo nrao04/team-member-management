@@ -1,4 +1,4 @@
-/* Container */
+/* container */
 .pageContainer {
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     background-color: #f9fafb; /* light gray background */
   }
   
-  /* Header */
+  /* header */
   .header {
     display: flex;
     justify-content: space-between;
@@ -34,9 +34,9 @@
     color: #666;
   }
   
-  /* Add Button */
+  /* add Button */
   .addButton {
-    background-color: #3e409b; /* Indigo-ish */
+    background-color: #3e409b; /* indigo-ish */
     color: #fff;
     border: none;
     padding: 8px 14px;
@@ -49,13 +49,13 @@
     background-color: #4f46e5; /* darker indigo */
   }
   
-  /* Members List Container */
+  /* members list container */
   .membersContainer {
     width: 100%;
     max-width: 600px;
   }
   
-  /* Single Member Item */
+  /* single member item */
   .memberItem {
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Avatar Root */
+  /* avatar root */
   .avatarRoot {
     position: relative;
     width: 48px;
@@ -80,14 +80,14 @@
     justify-content: center;
   }
   
-  /* Avatar Image */
+  /* avatar image */
   .avatarImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  /* Avatar Fallback */
+  /* avatar fallback */
   .avatarFallback {
     width: 100%;
     height: 100%;
@@ -100,7 +100,7 @@
     font-size: 14px;
   }
   
-  /* Member Info */
+  /* member info */
   .memberInfo {
     flex: 1;
     margin-left: 16px;
@@ -113,7 +113,7 @@
     margin-bottom: 4px;
   }
   
-  /* Edit Button */
+  /* edit button */
   .editButton {
     background-color: #3b82f6; /* blue */
     color: #fff;
@@ -128,7 +128,7 @@
     background-color: #2563eb; /* darker blue */
   }
   
-  /* Tooltip Content */
+  /* tooltip content */
   .tooltipContent {
     background-color: black;
     color: white;
@@ -137,7 +137,7 @@
     font-size: 12px;
   }
   
-  /* Tooltip Arrow */
+  /* tooltip arrow */
   .tooltipArrow {
     fill: black;
   }
