@@ -1,4 +1,4 @@
-# Team Member Management Application
+# TeamSync
 Web application that allows users to **view, add, edit, and delete team members** seamlessly. Built with **React**, **Django**, and **Radix UI**, providing an intuitive UI and smooth user experience.
 
 ## Table of Contents
